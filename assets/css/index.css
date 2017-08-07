@@ -2,11 +2,46 @@ body {
   margin: 0;
 }
 
-
 /* On devices wider than 660px */
 @media(min-width: 660px) {
 }
 
 /* On devices wider than 940px */
 @media(min-width: 940px) {
+}
+
+/*fonts and fluffy things :-)*/
+
+h1 {
+  font: #323232 'PT Sans Narrow Bold' 1.875em;
+}
+
+h2 {
+  font: #00897f 'PT Sans Narrow Bold' 1.5em;
+}
+
+h3 {
+  font: #323232 'PT Serif Regular' 2em;
+  line-height: 2em;
+}
+
+p {
+  font: #323232 'PT Serif Regular' .875em;
+  line-height: 1.75em;
+}
+
+a {
+  font: #f26522 'PT Serif Bold' 1em;
+}
+
+nav h1 {
+  font: #323232 'PT Sans Narrow Bold' 1.5em;
+}
+
+nav p {
+  font: #323232 'PT Sans Regular' .9em;
+}
+
+footer h1 {
+  font: #323232 'PT Sans Narrow Bold' 1.25em;
 }
