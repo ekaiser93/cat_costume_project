@@ -10,10 +10,16 @@ body {
 @media(min-width: 940px) {
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}  /*this is the clearfix!*/
+
 /*fonts and fluffy things :-)*/
 
 h1 {
-  font: #323232 'PT Sans Narrow Bold' 1.875em;
+  font: 'PT Sans Narrow Bold' 1.875em;
 }
 
 h2 {
@@ -44,4 +50,48 @@ nav p {
 
 footer h1 {
   font: #323232 'PT Sans Narrow Bold' 1.25em;
+}
+
+/*Nav it your way*/
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: #eeeeee;
+  color: #323232;
+}
+
+#navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#about, #contact {
+  text-decoration: none;
+  padding-right: 8%;
+  padding-top: 10px;
+  color: #323232;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 500;
+  display: inline;
+  float: right;
+  overflow: auto;
+}
+
+ul li:first-child{
+  display: inline;
+  padding-left: 3%;
+  padding-top: 4px;
+  float: left;
+  font-size: 1.875em;
+  color: #323232;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 300;
+  overflow: auto;
+}
+
+container .main-image {
+  width: 100%;
+  height: auto;
 }
