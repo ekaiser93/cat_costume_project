@@ -65,7 +65,7 @@ footer h1 {
 
 /*Nav it your way*/
 
-#navbar {
+nav {
   position: fixed;
   width: 100%;
   height: 5em;
@@ -75,33 +75,44 @@ footer h1 {
 }
 
 @media only screen and (max-width: 780px) {
-  #navbar {
-    height: 7em;
+  nav {
+    height: 8em;
   }
 }
 
-#navbar ul {
+nav ul {
   list-style-type: none;
   text-align: center;
 }
 
-#navbar ul li p {
+nav p {
   text-decoration: none;
   padding-right: 7%;
-  padding-top: .9375em;
+  padding-top: .5em;
   color: #323232;
   font-family: 'PT Sans Regular', sans-serif;
   font-size: .9em;
   display: inline;
   float: right;
   overflow: auto;
+  list-style-type: none;
+  text-align: center;
 }
 
-ul li h1 {
+@media only screen and (max-width: 780px) {
+  nav p {
+    width: 100%;
+    padding-right: 0;
+    margin: 0 auto;
+    margin-right: 7%;
+  }
+}
+
+nav h1 {
   display: inline;
   margin-top: 0;
   padding-left: 3%;
-  padding-top: .625em;
+  padding-top: 1.1em;
   float: left;
   font-size: 1.5em;
   color: #323232;
@@ -110,34 +121,81 @@ ul li h1 {
   overflow: auto;
 }
 
-@media only screen and (max-width: 600px) {
-  ul li:first-child {
+@media only screen and (max-width: 780px) {
+  nav h1 {
     text-align: center;
     display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 0;
   }
 }
 
+
 main {
   background-image: url(../images/kats-hero.jpg);
+  background-position: center top;
+  background-attachment: relative;
   max-width: 100%;
-  width: 100%;
   height: auto;
   background-repeat: no-repeat;
+}
+
+.kat-hero-mobile {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 11.3em;
+  margin-bottom: 2em;
+  position: center center;
+}
+
+@media only screen and (min-width: 470px) {
+    .kat-hero-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+    main {
+    background-image: url(../images/kats-hero-mobile.jpg);
+    background-position: center top;
+    background-attachment: relative;
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+    main {
+    background-image: url(../images/kats-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-position: top;
+  }
 }
 
 .main-content {
   padding: 39.9375em 5.625em 5em 5.625em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 470px) {
     .main-content {
-    padding: 37em 2em 3em 2em;
+    padding: 1em 2em 0 2em;
   }
 }
 
 .main-content h1 {
   margin-top: 0 0 2.8125em 0;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+   .main-content h1 {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .main-content p {
@@ -180,6 +238,7 @@ section.about-us {
     margin: 0 auto;
     width: 70%;
     margin-bottom: 2em;
+    margin-top: 2em;
   }
 }
 
@@ -250,7 +309,7 @@ section.get-in-touch {
   .business-hours {
     float: none;
     margin: 0 auto;
-    width: 21em;
+    width: 17em;
     margin-bottom: 2em;
   }
 }
@@ -278,11 +337,11 @@ section.get-in-touch {
   .contact-info {
     float: none;
     margin: 0 auto;
-    width: 21em;
+    width: 17em;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .contact-info {
     float: none;
     margin: 0 auto;
@@ -302,26 +361,30 @@ section.get-in-touch {
   margin-top: 0;
 }
 
-@media only screen and (max-width: 1300px) {
-  .business-hours h3, .contact-info h3 {
-    margin-left: 2.25em;
-    margin-right: .5em;
+@media only screen and (max-width: 1208px) {
+  .contact-info h3, .business-hours h3 {
+    margin-left: 1em;
   }
 }
 
-@media only screen and (max-width: 780px) {
-  .business-hours h3, .contact-info h3 {
-    margin-left: 2.25em;
-    margin-right: .5em;
+@media only screen and (max-width: 579px) {
+  .contact-info h3, .business-hours h3 {
+    margin-left: 4em;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .business-hours h3, .contact-info h3 {
-    margin-left: 10%;
-    margin-right: .5em;
+@media only screen and (max-width: 425px) {
+  .contact-info h3, .business-hours h3 {
+    margin: 0;
+    padding: none;
   }
 }
+
+.contact-info .contact-info-static {
+  width: 95%;
+  margin: 0 auto;
+}
+
 
 .contact-info .address-heading {
   float: left;
@@ -333,19 +396,27 @@ section.get-in-touch {
   text-decoration: none;
   float: right;
   vertical-align: top;
-  margin-right: 4em;
-  margin-top: 0;
+  margin-right: 20%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1208px) {
   .contact-info .address-section a {
-    margin-right: 2em;
+    margin-right: 1em;
   }
 }
+
+@media only screen and (max-width: 579px) {
+  .contact-info .address-section a {
+    margin-right: 7em;
+  }
+}
+
 
 .kats-map {
   vertical-align: top;
   width: 100%;
+  height: auto;
+  position: relative;
   height: auto;
 }
 
