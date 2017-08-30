@@ -76,19 +76,20 @@ nav {
 
 @media only screen and (max-width: 780px) {
   nav {
-    height: 8em;
+    height: 6em;
   }
 }
 
 nav ul {
   list-style-type: none;
   text-align: center;
+  padding: 0;
 }
 
 nav p {
   text-decoration: none;
   padding-right: 7%;
-  padding-top: .5em;
+  padding-top: 0;
   color: #323232;
   font-family: 'PT Sans Regular', sans-serif;
   font-size: .9em;
@@ -101,10 +102,17 @@ nav p {
 
 @media only screen and (max-width: 780px) {
   nav p {
-    width: 100%;
-    padding-right: 0;
+    width: 70%;
+    padding: 20px;
     margin: 0 auto;
-    margin-right: 7%;
+    float: none;
+  }
+
+  nav ul li {
+    width: 100px;
+    float: none;
+    margin: 0 auto;
+    display: inline;
   }
 }
 
@@ -128,6 +136,8 @@ nav h1 {
     margin: 0 auto;
     width: 100%;
     padding-left: 0;
+    padding-top: .7em;
+    padding-bottom: .3em;
   }
 }
 
@@ -195,6 +205,7 @@ main {
    .main-content h1 {
     margin-top: 0;
     text-align: center;
+    font-size: 1.6em;
   }
 }
 
@@ -218,13 +229,19 @@ section.about-us {
   width: 100%;
 }
 
+@media only screen and (max-width: 500px) {
+  section.about-us {
+    margin-bottom: 2em;
+  }
+}
+
 .about-us h2 {
   text-align: center;
 }
 
 .about-kat {
   width: 20%;
-  height: auto;
+  height: 250px;
   padding: 1.875em;
   background: #eeeeee;
   margin-right: 0.9375em;
@@ -236,15 +253,28 @@ section.about-us {
   .about-kat {
     float: none;
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
     margin-bottom: 2em;
     margin-top: 2em;
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .about-kat {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-kat {
+    width: 70%;
   }
 }
 
 .about-mavis {
   width: 20%;
-  height: auto;
+  height: 250px;
   padding: 1.875em;
   background: #eeeeee;
   margin-right: 24%;
@@ -256,21 +286,50 @@ section.about-us {
   .about-mavis {
     float: none;
     margin: 0 auto;
+    width: 50%;
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .about-mavis {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-mavis {
     width: 70%;
   }
 }
 
 .cat-image-section {
-  margin-left: 5%;
-  width: 90%;
-  text-align: center;
+  width: 70%;
   display: inline-block;
-  margin-bottom: 5em;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
+
 @media only screen and (max-width: 780px) {
-  .cat-image-section {
+    .kat-1, .kat-2 {
     display: none;
+  }
+
+  .cat-image-section {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .kat-3, .cat-image-section {
+    padding: 0 0 20px 0;
+    margin: 0 auto;
   }
 }
 
@@ -283,6 +342,13 @@ section.get-in-touch {
   width: 100%;
   background: #eeeeee;
   padding-bottom: 5em;
+}
+
+@media only screen and (max-width: 500px) {
+  section.get-in-touch {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .get-in-touch h1 {
@@ -305,16 +371,17 @@ section.get-in-touch {
   list-style-type: none;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1435px) {
   .business-hours {
     float: none;
     margin: 0 auto;
-    width: 17em;
+    width: 40em;
     margin-bottom: 2em;
+    display: block;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .business-hours {
     float: none;
     margin: 0 auto;
@@ -333,20 +400,32 @@ section.get-in-touch {
   margin-right: 20%;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1435px) {
   .contact-info {
     float: none;
     margin: 0 auto;
-    width: 17em;
+    width: 40em;
+    margin-bottom: 2em;
+    display: block;
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 800px) {
   .contact-info {
     float: none;
+    display: block;
     margin: 0 auto;
     width: 80%;
     margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .business-hours, .contact-info {
+    background: #eeeeee;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -357,60 +436,33 @@ section.get-in-touch {
 
 .contact-info h3, .business-hours h3 {
   display: block;
-  margin-left: 2em;
+  margin-bottom: 1em;
   margin-top: 0;
 }
 
-@media only screen and (max-width: 1208px) {
-  .contact-info h3, .business-hours h3 {
-    margin-left: 1em;
-  }
-}
-
-@media only screen and (max-width: 579px) {
-  .contact-info h3, .business-hours h3 {
-    margin-left: 4em;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .contact-info h3, .business-hours h3 {
-    margin: 0;
-    padding: none;
-  }
-}
-
-.contact-info .contact-info-static {
-  width: 95%;
+.contact-info-static, .business-hours-static {
+  width: 266px;
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 800px) {
+  .contact-info-static, .business-hours-static {
+    width: 260px;
+    margin: inherit;
+  }
+}
 
-.contact-info .address-heading {
-  float: left;
+h3.address-heading {
+  width: 86px;
   display: inline;
 }
 
-.contact-info .address-section a {
-  display: inline;
-  text-decoration: none;
+.address-section {
+  width: 160px;
+  margin-right: 21px;
   float: right;
-  vertical-align: top;
-  margin-right: 20%;
+  display: inline;
 }
-
-@media only screen and (max-width: 1208px) {
-  .contact-info .address-section a {
-    margin-right: 1em;
-  }
-}
-
-@media only screen and (max-width: 579px) {
-  .contact-info .address-section a {
-    margin-right: 7em;
-  }
-}
-
 
 .kats-map {
   vertical-align: top;
@@ -432,4 +484,14 @@ footer h1 {
   padding-top: 3.75em;
   color: #ffffff;
   margin-top: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    display: none;
+  }
+
+  footer h1 {
+    display: none;
+  }
 }
